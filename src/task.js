@@ -1,6 +1,6 @@
 class Task {
   constructor(description) {
-    this.tasks = JSON.parse(localStorage.getItem('toDoList')) || [];
+    this.tasks = JSON.parse(localStorage.getItem("toDoList")) || [];
     this.index = null;
     this.completed = false;
     this.description = description;
@@ -17,17 +17,18 @@ class Task {
 
   removerTask = (index) => {
     this.tasks.splice(index, 1);
-    if (index === -1) return;
     this.tasks = this.tasks.map((task, index) => ({ ...task, index }));
+    return this.tasks[index];
   };
 
   editTask = (index, value) => {
     if (index === -1) return;
     this.tasks[index].description = value;
     this.updateTask();
-  }
+  };
 
-  updateTask = () => localStorage.setItem('toDoList', JSON.stringify(this.tasks));
+  updateTask = () =>
+    localStorage.setItem("toDoList", JSON.stringify(this.tasks));
 }
 
 export default Task;

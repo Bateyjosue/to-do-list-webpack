@@ -1,4 +1,4 @@
-export default class Task {
+class Task {
   constructor(description) {
     this.tasks = JSON.parse(localStorage.getItem('toDoList')) || [];
     this.index = null;
@@ -12,19 +12,22 @@ export default class Task {
       description,
       completed: false,
     });
+    return description;
   };
 
   removerTask = (index) => {
     this.tasks.splice(index, 1);
-    if (index === -1) return;
     this.tasks = this.tasks.map((task, index) => ({ ...task, index }));
+    return this.tasks[index];
   };
 
   editTask = (index, value) => {
     if (index === -1) return;
     this.tasks[index].description = value;
     this.updateTask();
-  }
+  };
 
   updateTask = () => localStorage.setItem('toDoList', JSON.stringify(this.tasks));
 }
+
+export default Task;

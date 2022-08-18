@@ -1,4 +1,4 @@
-export default class Task {
+class Task {
   constructor(description) {
     this.tasks = JSON.parse(localStorage.getItem('toDoList')) || [];
     this.index = null;
@@ -12,6 +12,7 @@ export default class Task {
       description,
       completed: false,
     });
+    return description;
   };
 
   removerTask = (index) => {
@@ -28,3 +29,5 @@ export default class Task {
 
   updateTask = () => localStorage.setItem('toDoList', JSON.stringify(this.tasks));
 }
+
+export default Task;

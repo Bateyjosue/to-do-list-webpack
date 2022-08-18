@@ -1,6 +1,6 @@
 class Task {
   constructor(description) {
-    this.tasks = JSON.parse(localStorage.getItem("toDoList")) || [];
+    this.tasks = JSON.parse(localStorage.getItem('toDoList')) || [];
     this.index = null;
     this.completed = false;
     this.description = description;
@@ -27,8 +27,7 @@ class Task {
     this.updateTask();
   };
 
-  updateTask = () =>
-    localStorage.setItem("toDoList", JSON.stringify(this.tasks));
+  updateTask = () => localStorage.setItem('toDoList', JSON.stringify(this.tasks));
 }
 
 export default Task;

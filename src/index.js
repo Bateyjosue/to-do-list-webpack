@@ -7,7 +7,6 @@ const status = new Status();
 
 const todoList = document.querySelector('.todo-list');
 
-
 task.tasks.forEach((todo) => {
   todoList.innerHTML += `
     <li>

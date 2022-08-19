@@ -22,12 +22,21 @@ class Task {
   };
 
   editTask = (index, value) => {
-    if (index === -1) return;
-    this.tasks[index].description = value;
+    this.tasks[index] = value;
     this.updateTask();
+    return this.tasks[index];
   };
 
   updateTask = () => localStorage.setItem('toDoList', JSON.stringify(this.tasks));
 }
 
 export default Task;
+
+// removeCompleted = () => {
+//   const isCompleted = this.tasks.filter((task) => task.completed === true);
+//   isCompleted.forEach((task) => {
+//     this.removerTask(task.index);
+//     this.updateTask();
+//   });
+//   return isCompleted;
+// };

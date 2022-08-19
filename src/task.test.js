@@ -48,5 +48,6 @@ describe('Update Status', () => {
 
 test('Clear All Completed ', () => {
   const ourTask = new Task();
-  expect(ourTask.removeCompleted()).toHaveLength(0);
+  ourTask.tasks.push({ index: 1, description: 'Morning Prayer', completed: true });
+  expect(ourTask.removeCompleted()).not.toHaveLength(0);
 });

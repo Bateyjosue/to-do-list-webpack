@@ -16,5 +16,3 @@ export default class Status {
     return this.task.tasks[index].completed;
   };
 }
-
-// export default updateStatus;

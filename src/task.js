@@ -29,7 +29,7 @@ class Task {
 
 removeCompleted = () => {
   const isCompleted = this.tasks.filter((task) => task.completed === true);
-  isCompleted.forEach((task) =>{
+  isCompleted.forEach((task) => {
     this.removerTask(task.index);
     this.updateTask();
   });

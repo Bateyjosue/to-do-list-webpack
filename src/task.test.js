@@ -45,3 +45,8 @@ describe('Update Status', () => {
     expect(status.updateStatus(1, true)).toBe(status.task.tasks[1].completed);
   });
 });
+
+test("Clear All Completed ", ()=> {
+  const ourTask = new Task();
+  expect(ourTask.removeCompleted()).toHaveLength(0);
+});

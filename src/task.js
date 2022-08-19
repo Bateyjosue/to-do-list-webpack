@@ -27,6 +27,16 @@ class Task {
     this.updateTask();
   };
 
+removeCompleted = () => {
+const isCompleted = this.tasks.filter((task) => task.completed === true);
+isCompleted.forEach((task) =>{
+this.removerTask(task.index);
+this.updateTask();
+});
+return isCompleted;
+};
+
+
   updateTask = () => localStorage.setItem('toDoList', JSON.stringify(this.tasks));
 }
 

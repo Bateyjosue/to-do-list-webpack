@@ -36,6 +36,9 @@ Note: Make sure you have [nodejs](https://nodejs.org/en/download/) installed and
 - Twitter: [@JosueBatey](https://twitter.com/josuebatey)
 - LinkedIn: [Josue (Josh) Batey](https://www.linkedin.com/in/josue-ishara/)
 
+### Contributor
+@Alusp Allusine Jalloh
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

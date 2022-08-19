@@ -46,7 +46,7 @@ describe('Update Status', () => {
   });
 });
 
-test("Clear All Completed ", ()=> {
+test('Clear All Completed ', () => {
   const ourTask = new Task();
   expect(ourTask.removeCompleted()).toHaveLength(0);
 });

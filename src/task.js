@@ -22,10 +22,19 @@ class Task {
   };
 
   editTask = (index, value) => {
-    if (index === -1) return;
-    this.tasks[index].description = value;
+    this.tasks[index] = value;
     this.updateTask();
+    return this.tasks[index];
   };
+
+removeCompleted = () => {
+  const isCompleted = this.tasks.filter((task) => task.completed === true);
+  isCompleted.forEach((task) => {
+    this.removerTask(task.index);
+    this.updateTask();
+  });
+  return isCompleted;
+};
 
   updateTask = () => localStorage.setItem('toDoList', JSON.stringify(this.tasks));
 }

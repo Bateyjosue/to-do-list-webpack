@@ -13,7 +13,6 @@ export default class Status {
       this.task.tasks[index].completed = true;
       this.task.updateTask();
     }
+    return this.task.tasks[index].completed;
   };
 }
-
-// export default updateStatus;

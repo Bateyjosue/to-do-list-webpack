@@ -125,4 +125,5 @@ const remove = (element) => {
 
 clearAll.addEventListener('click', () => {
   [...checkTask].filter(remove);
+  window.location.reload();
 });

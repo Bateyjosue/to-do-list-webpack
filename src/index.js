@@ -101,7 +101,6 @@ addTaskInput.addEventListener('keypress', (e) => {
       </li>
     `;
     addTaskInput.value = '';
-    window.location.reload();
   }
 });
 
